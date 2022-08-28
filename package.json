@@ -1,0 +1,44 @@
+{
+  "name": "storefront_backend",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "build": "npx tsc && cp .npmrc dist/.npmrc && cp package.json dist/package.json && cd dist && zip -r Archive.zip . && cd ..",
+    "start": "npx node server.js",
+    "deploy": "eb use store-front-api-deploy-dev && eb deploy",
+    "watch": "npx tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
+    "db-test": "npx db-migrate --env test up",
+    "db-test-reset": "npx db-migrate --env test reset",
+    "test": "npm run build && npm run db-test & set ENV=test & jasmine & npm run db-test-reset"
+  },
+  "author": "Udacity",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^14.15.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "bcrypt": "^5.0.1",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jasmine": "^4.0.3",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/node": "^18.0.0",
+    "@types/pg": "^8.6.5",
+    "@types/supertest": "^2.0.12",
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2",
+    "jasmine": "^4.2.1",
+    "jasmine-spec-reporter": "^7.0.0",
+    "supertest": "^6.2.4",
+    "ts-node": "^10.8.1",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.7.4"
+  }
+}
