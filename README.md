@@ -11,8 +11,8 @@ You should create another database for testing and give it a name, for example, 
 => CREATE DATABASE store_db_test;
 ```
 ### Port Numbers
-Server is running on port 3000
-Database is running on port 5432
+- Server is running on port 3000
+- Database is running on port 5432
 ### Package Installation
 I have included package.json file that contains all required packages that you can install it using:
 ```console
@@ -44,12 +44,12 @@ $ npm run test
 ```
 
 ## Envrionment Variables
-### POSTGRES_HOST
-### POSTGRES_DB
-### POSTGRES_DB_TEST
-### POSTGRES_USER
-### POSTGRES_PASSWORD
-### ENV
-### BCRYPT_PASSWORD
-### SALT_ROUNDS
-### TOKEN_SECRET
+- POSTGRES_HOST
+- POSTGRES_DB
+- POSTGRES_DB_TEST
+- POSTGRES_USER
+- POSTGRES_PASSWORD
+- ENV
+- BCRYPT_PASSWORD
+- SALT_ROUNDS
+- TOKEN_SECRET
