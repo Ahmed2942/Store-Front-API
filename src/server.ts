@@ -17,6 +17,8 @@ app.listen(port, function () {
     console.log(`starting app on: ${port}`);
 })
 
+console.log(process.env.POSTGRES_USER);
+
 productRoutes(app);
 userRoutes(app);
 orderRoutes(app);
