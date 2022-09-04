@@ -18,6 +18,11 @@ I have included package.json file that contains all required packages that you c
 ```console
 $ npm install
 ```
+## Deploy
+This API is ready for automated deployment on AWS Elastic Beanstalk using CircleCI.
+```console
+$ npm run deploy
+```
 
 ## Start
 - Typescript (Development)
