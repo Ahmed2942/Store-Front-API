@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npx tsc && cp .npmrc dist/.npmrc && cp package.json dist/package.json && cd dist && zip -r Archive.zip . && cd ..",
     "start": "npx node server.js",
+    "dev": "npx ts-node src/server.ts",
     "deploy": "eb use store-front-api-deploy-dev && eb deploy && eb setenv POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB=$POSTGRES_DB POSTGRES_USER=$POSTGRES_USER POSTGRES_PASSWORD=$POSTGRES_PASSWORD ENV=$ENV BCRYPT_PASSWORD=$BCRYPT_PASSWORD SALT_ROUNDS=$SALT_ROUNDS TOKEN_SECRET=$TOKEN_SECRET",
     "watch": "npx tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
     "db-test": "npx db-migrate --env test up",

@@ -4,11 +4,11 @@
 ### Connecting to database
 You should create database and give it a name, for example, create "store_db" on your system using this command on your database server:
 ```console
-=> CREATE DATABASE store_db;
+=> CREATE DATABASE DB_NAME;
 ```
 You should create another database for testing and give it a name, for example, create "store_db_test" on your system using this command on your database server:
 ```console
-=> CREATE DATABASE store_db_test;
+=> CREATE DATABASE TEST_DB_NAME;
 ```
 ### Port Numbers
 - Server is running on port 3000
@@ -20,17 +20,17 @@ $ npm install
 ```
 
 ## Start
-- Typescript
+- Typescript (Development)
 ```console
-$ npm run start
+$ npm run dev
+```
+- Watch mode (Development)
+```console
+$ npm run watch
 ```
 - Javascript (Distribution)
 ```console
-$ npm run start:dist
-```
-- Watch mode
-```console
-$ npm run watch
+$ npm run start
 ```
 
 ## Build Database Schema
